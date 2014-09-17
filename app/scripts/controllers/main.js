@@ -1,17 +1,15 @@
 'use strict';
 
 /**
- * @ngdoc function
+ * @ngdoc funetion
  * @name angularTestApp.controller:MainCtrl
  * @description
  * # MainCtrl
  * Controller of the angularTestApp
  */
-angular.module('angularTestApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+var myapp = angular.module('angularTestApp');
+  myapp.controller('MainCtrl', function ($scope, $location) {
+ 	$scope.isActive = function (curLocation) {
+		return curLocation == $location.path();
+	};
   });
