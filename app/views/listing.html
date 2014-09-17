@@ -3,6 +3,7 @@
 		<li>{{listing.name}}</li>
 		<li>{{listing.date | date}}</li>
 		<li>{{listing.status}}</li>
+		<li><button ng-click="removeListing($index)">Remove</button></li>
 	</ul>
 	<form role="form" name="listingForm" ng-submit="addListing(listings)" novalidate>
 		<ul>

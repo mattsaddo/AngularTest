@@ -28,4 +28,9 @@ angular.module('angularTestApp')
       listings.push(this.listing); //add the data from the form into listings
       this.listing = {}; // reset the form
     };
+    
+    $scope.removeListing = function(listing){
+      $scope.listings.splice(listing,1);
+    };
+
   }]);
